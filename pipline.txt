@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git checkout') {
+            steps {
+                git branch: 'main', credentialsId: '418ea151-32d9-4d54-80e9-41857f9514f1', url: 'https://github.com/akhileshrana123455/asssignment'
+            }
+        }
+        stage('terraform init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage('terraform plan') {
+            steps {
+                sh 'terraform plan -lock=false'
+            }
+        }
+        stage('terraform plan') {
+            steps {
+                sh 'terraform apply --auto-approve -lock=false'
+            }
+        }
+    }
+}
+

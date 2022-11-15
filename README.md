@@ -1,2 +1,6 @@
-# php-application-HA-AWS
-This is a simple PHP web-application that uses features like High Availbility, Monitoring etc
+Perequisites:
+    AWS profile congifgurations
+    ec2 instance for creating AMI
+        install maven on instanse then clone your repo containing maven project
+        run command #mvn clean install (into directory)
+        run command #
