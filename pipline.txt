@@ -17,7 +17,7 @@ pipeline {
                 sh 'terraform plan -lock=false'
             }
         }
-        stage('terraform plan') {
+        stage('terraform apply') {
             steps {
                 sh 'terraform apply --auto-approve -lock=false'
             }
