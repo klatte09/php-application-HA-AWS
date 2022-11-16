@@ -9,5 +9,6 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
+  profile    = "ankit"
   region     = "us-east-2"
 }
