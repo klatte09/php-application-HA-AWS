@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'main', credentialsId: '418ea151-32d9-4d54-80e9-41857f9514f1', url: 'https://github.com/akhileshrana123455/asssignment'
+                git branch: 'main', credentialsId: '<change here>', url: '<change here>'
             }
         }
         stage('terraform init') {
